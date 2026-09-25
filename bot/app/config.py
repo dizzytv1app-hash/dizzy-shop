@@ -14,7 +14,7 @@ def _parse_admin_ids(raw: str) -> set[int]:
 
 
 class Settings:
-    BOT_TOKEN: str = os.getenv("8924504263:AAFXPH1_z0KcMb4TiV4G57Q3S7rqCCbGZm8", "")
+    BOT_TOKEN: str = os.getenv("BOT_TOKEN", "")
     WEBAPP_URL: str = os.getenv("WEBAPP_URL", "https://example.vercel.app")
     ADMIN_IDS: set[int] = _parse_admin_ids(os.getenv("ADMIN_IDS", ""))
     API_BASE_URL: str = os.getenv("API_BASE_URL", "http://localhost:8000/api")
